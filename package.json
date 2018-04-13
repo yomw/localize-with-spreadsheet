@@ -1,21 +1,21 @@
 {
     "author": {
-        "name": "Xavier Hainaux",
-        "email": "xavier.hainaux@gmail.com"
+        "name": "Alexis Ardouin"
     },
     "name": "localize-with-spreadsheet",
     "description": "Create a localization file in Android or iOS format from a Google Spreadsheet",
-    "version": "0.2.1",
-    "homepage": "https://github.com/xavierha/localize-with-spreadsheet",
+    "version": "1.0.0",
+    "homepage": "https://github.com/aardouin/localize-with-spreadsheet",
     "repository": {
         "type": "git",
-        "url": "git://github.com/xavierha/localize-with-spreadsheet.git"
+        "url": "git://github.com/aardouin/localize-with-spreadsheet.git"
     },
     "main": "index.js",
     "dependencies": {
-        "google-spreadsheets": "git://github.com/xavierha/node-google-spreadsheets.git",
-        "q": "0.9.2",
-        "mkpath": "0.1.0"
+        "google-spreadsheet": "git://github.com/aardouin/node-google-spreadsheet#1.0",
+        "q":"*",
+        "mkpath":"*",
+        "path":"*"
     },
     "devDependencies": {
         "nodeunit": "0.8.1"

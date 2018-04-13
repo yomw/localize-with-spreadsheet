@@ -42,7 +42,7 @@ Line.normalizeComment = function (val) {
 };
 
 Line.prototype.isEmpty = function () {
-    return !this._isComment && !this._key;
+    return !this._isComment && (!this._key || this._key == '');
 };
 
 Line.prototype.isComment = function () {

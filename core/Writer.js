@@ -39,17 +39,24 @@ var writeFileAndCreateDirectoriesSync = function (filepath, content, encoding) {
 
 FileWriter.prototype.getTransformedLines = function (lines, transformer) {
     var valueToInsert = '';
+    var blank = 0
     for (var i = 0; i < lines.length; i++) {
         var line = lines[i];
         if (!line.isEmpty()) {
+            blank = 0
             if (line.isComment()) {
                 valueToInsert += transformer.transformComment(line.getComment());
             } else {
                 valueToInsert += transformer.transformKeyValue(line.getKey(), line.getValue());
             }
-        }
-        if (i != lines.length - 1) {
-            valueToInsert += EOL;
+            if (i != lines.length - 1) {
+                valueToInsert += EOL;
+            }
+        } else {
+            blank += 1
+            if (blank < 2 && i != lines.length - 1) {
+                valueToInsert += EOL;
+            }
         }
     }
 

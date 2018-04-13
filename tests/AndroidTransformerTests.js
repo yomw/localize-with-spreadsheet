@@ -98,3 +98,11 @@ exports.test_Insert_AfterIsSameAsBeforeIfNewValueDontChange = function (test) {
 
     test.done();
 };
+
+
+exports.testContainingHtmlTags = function (test) {
+    var line = transformer.transformKeyValue('ma_cle', '<b>');
+    test.equal('<string name="ma_cle">&lt;b&gt;</string>', line);
+
+    test.done();
+};
