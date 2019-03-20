@@ -47,9 +47,9 @@ Run it with
 You can filter the worksheets to include with the second parameter of 'fromGoogleSpreadsheet'
 Ex:
 
-    Localize.fromGoogleSpreadsheet("<Key>", '*');
-    Localize.fromGoogleSpreadsheet("<Key>", ['HomeScreen, 'ContactScreen']);
-    Localize.fromGoogleSpreadsheet("<Key>", [0, 2]);
+    Localize.fromGoogleSpreadsheet("<key>", '*');
+    Localize.fromGoogleSpreadsheet("<key>", ['HomeScreen, 'ContactScreen']);
+    Localize.fromGoogleSpreadsheet("<key>", [0, 2]);
 
 ## Notes
 - The script will preserve everything that is above the tags: < !-- AUTO-GENERATED --> or // AUTO-GENERATED
